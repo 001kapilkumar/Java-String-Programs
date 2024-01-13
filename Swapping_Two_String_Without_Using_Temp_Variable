@@ -1,0 +1,19 @@
+import java.util.*;
+public class Swapping_Two_String_Without_Using_Temp_Variable {
+    public static void main(String[] args){
+        String s1 = "Good" ;
+        String s2 = "Morning" ;
+        System.out.println("Strings Before swapping");
+        System.out.println(" String s1 = " + s1);
+        System.out.println("String s2 = " + s2);
+        System.out.println("Strings after swapping are ");
+        ArrayList<String> list = new ArrayList<String>() ;
+        list.add(s1);
+        list.add(s2);
+        //System.out.println(list);
+        s1 = list.get(1);
+        s2 = list.get(0) ;
+        System.out.println("String s1 = " + s1);
+        System.out.println("String s2 = "+ s2);
+        }
+    }
