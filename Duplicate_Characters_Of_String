@@ -1,0 +1,32 @@
+import java.util.*;
+public class Duplicate_Characters_Of_String {
+    public static void main(String [] args){
+        String s1 = "Great responsibility  " ;
+        System.out.println("String be " ) ;
+        System.out.println(s1) ;
+        String s = s1.replace(" ","");
+        System.out.println("String without white spaces be ") ;
+        System.out.println(s) ;
+        ArrayList<String> list = new ArrayList<String>() ;
+        int digit = 0;
+        for(int i = 0; i<s.length() ; i++){
+
+            for(int z =  i-1; z>=0 ;z-- ){
+                if(s.charAt(i) == s.charAt(z)){
+                    digit++ ;
+                }
+            }
+            for(int j = i+1; j<s.length() ; j++){
+                if(s.charAt(i) == s.charAt(j) && digit == 0){
+                    list.add(String.valueOf(s.charAt(i))) ;
+                    digit++ ;
+                }
+            }
+            digit = 0;
+        }
+        System.out.println("Duplicate characters of string be ");
+        for(int i = 0; i<list.size() ; i++){
+            System.out.println(list.get(i));
+        }
+    }
+}
