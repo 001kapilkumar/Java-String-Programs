@@ -1,0 +1,24 @@
+import java.util.*;
+public class One_String_Is_Rotation_Of_Another_String {
+    public static void main(String[] args){
+        String s1 = "123456789";
+        String s2 = "912345678" ;
+        String s3 = s1.concat(s1) ;
+        // s1 = s1.concat(s1) ;
+        if(s1.length() != s2.length()){
+            System.out.println("String is not rotation of other string");
+        }
+        else{
+
+            if(s3.indexOf(s2) != -1) {
+                System.out.println("String is rotation of other string");
+            }
+            else {
+                System.out.println("String is not rotation of other rotation");
+            }
+        }
+
+
+
+    }
+}
