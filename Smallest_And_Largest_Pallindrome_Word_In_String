@@ -1,0 +1,47 @@
+public class Smallest_And_Largest_Pallindrome_Word_In_String {
+    public static void main(String[] args) {
+        String s = "Wow you own kayak";
+        s = s.toLowerCase() ;
+        System.out.println("String be ");  
+        System.out.println(s);
+        String [] words = s.split(" ") ;
+     //   System.out.println(words.length);
+       // System.out.println(words[0].charAt(1));
+        //System.out.println(words[3]) ;
+        int digit = 0;
+        int largest_digi = 0;
+        int smallest_digi = 110;
+        String largest = "" ;
+        String smallest = "" ;
+        for(int i = 0; i<words.length; i++){
+
+                for(int j = 0 ; j<words[i].length(); j++){
+                   if(words[i].charAt(j) == words[i].charAt(words[i].length()-1-j)){
+                       digit++ ;
+                   }
+
+                    }
+
+                if (digit == words[i].length() && largest_digi < digit ) {
+                    largest = words[i];
+                    largest_digi = digit;
+
+                }
+
+
+                 if(digit == words[i].length()  && smallest_digi>digit){
+
+                    smallest = words[i] ;
+                    smallest_digi = digit ;
+
+                }
+            digit = 0;
+
+        }
+        System.out.println("Largest pallindrome word in string be " + largest) ;
+        System.out.println("Smallest pallindrome word in string be "+ smallest) ;
+
+
+
+    }
+}
